@@ -6,7 +6,7 @@ import cv2
 # Loading the cascades (Acts like Filters with Equations, not a Neural Network)
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') # Load the cascade for the face
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml') # Load the cascade for the eyes
-smile_cascade = cv2.CascadeClassifier('haarcascade_smile') # Load the cascade for the smile
+smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml') # Load the cascade for the smile
 
 # Defining a function that will do the detections
 def detect(gray, frame): # Function that takes as input the image in black and white (gray) and the original image (frame), and that will return the same image with the detector rectangles
