@@ -3,6 +3,10 @@
 ## About
 This repository is from a course on Udemy, [Computer Vision A-Z™]()
 
+Links: 
+- Installation Problem: https://www.udemy.com/computer-vision-a-z/learn/v4/questions/5381002
+- SuperDataScience Website: https://www.udemy.com/computer-vision-a-z/learn/v4/t/lecture/8105004?start=540
+
 ## Installation (Windows 10)
 1. Download Anaconda and open Anaconda Prompt
 2. Open 'virtual_platform_windows.yml` installation file location (cd C:\Users\efoo1\Desktop\Computer_Vision_A_Z Folder\Installations)
