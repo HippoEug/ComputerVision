@@ -6,6 +6,7 @@ import cv2
 # Loading the cascades (Acts like Filters with Equations, not a Neural Network)
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') # Load the cascade for the face
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml') # Load the cascade for the eyes
+smile_cascade = cv2.CascadeClassifier('haarcascade_smile') # Load the cascade for the smile
 
 # Defining a function that will do the detections
 def detect(gray, frame): # Function that takes as input the image in black and white (gray) and the original image (frame), and that will return the same image with the detector rectangles
@@ -16,9 +17,13 @@ def detect(gray, frame): # Function that takes as input the image in black and w
         roi_gray = gray[y:y+h, x:x+w] # Get the region of interest in the black and white image
         roi_color = frame[y:y+h, x:x+w] # Get the region of interest in the colored image
         
-        eyes = eye_cascade.detectMultiScale(roi_gray, 1.1, 3) # Apply the detectMultiScale method to locate one or several eyes in the image
+        eyes = eye_cascade.detectMultiScale(roi_gray, 1.1, 15) # Apply the detectMultiScale method to locate one or several eyes in the image
         for (ex, ey, ew, eh) in eyes: # For each detected eye
             cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2) # Paint a rectangle around the eyes, but inside the referential of the face
+    
+        smile = smile_cascade.detectMultiScale(roi_gray, 1.7, 22) # Apply the detectMultiScale method to locate one or several smiles in the image
+        for (sx, sy, sw, sh) in smile: # For each detected smile
+            cv2.rectangle(roi_color, (sx, sy), (sx+sw, sy+sh), (0, 0, 255), 2) # Paint a rectangle around the smiles, but inside the refertial of the face
     
     return frame; # Return the image with the detector rectangles
 
