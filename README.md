@@ -2,6 +2,7 @@
 
 ## About
 This repository is from a course on Udemy, [Computer Vision A-Z™](https://www.udemy.com/computer-vision-a-z/learn/v4/overview)
+
 Course Notes: [Google Slides](https://docs.google.com/presentation/d/1_1bf_OJFHyY0BfvelC2EGPfx3UH-XFukb8IxXSZxa98/edit#slide=id.g443fb36d21_0_96)
 
 Links: 
